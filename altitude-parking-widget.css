@@ -1,0 +1,229 @@
+.altitude-parking__hidden {
+  display: none !important;
+}
+
+/* dev grid highilight */
+/*.altitude-parking__form_content,
+.altitude-parking__field,
+.altitude-parking__field-aside,
+.altitude-parking__field-content,
+.altitude-parking__field-content:after,
+.altitude-parking__button {
+  border: 1px solid red;
+}
+
+.altitude-parking__form_content {
+  border-color: orange;
+}
+.altitude-parking__field-content,
+.altitude-parking__field-aside {
+  border-color: cyan;
+}*/
+
+.altitude-parking__wrapper {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  color: #fff;
+  background: #1c4d95;
+}
+.altitude-parking__wrapper *,
+.altitude-parking__wrapper *:before,
+.altitude-parking__wrapper *:after {
+  box-sizing: inherit;
+}
+
+.altitude-parking__form {
+  display: block;
+  max-width: 1280px;
+  margin: auto;
+  line-height: 1.42857;
+  color: #fff;
+  background-color: #1c4d95;
+  /* use to scela up/down controls */
+  font-size: 16px;
+}
+.altitude-parking__form_content,
+.altitude-parking__field,
+.altitude-parking__button {
+  display: flex;
+  padding: 0.5em;
+
+  justify-content: center;
+}
+
+.altitude-parking__form_content {
+  flex-direction: column;
+
+  flex-wrap: wrap;
+}
+
+.altitude-parking__field {
+  flex-direction: column;
+
+  flex: 1 0 auto;
+}
+
+.altitude-parking__button {
+  flex: 2 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.altitude-parking__field-content {
+  position: relative;
+  color: #333333;
+  cursor: pointer;
+  background-color: #fff;
+  border-color: #fff;
+  border-radius: 2px;
+}
+
+.altitude-parking__date-content {
+  padding-right: 2.2em;
+}
+.altitude-parking__date-content:after {
+  position: absolute;
+  top: 0;
+  right: 0.3em;
+  display: inline-block;
+  font-family: "fontello";
+  font-size: 1.65em;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1.42857;
+  color: #b6c1c9;
+  text-align: center;
+  text-decoration: inherit;
+  text-transform: none;
+  content: '\e853';
+
+  speak: none;
+}
+
+
+.altitude-parking__field-aside {
+  padding: 0.5em 0 0 0;
+  font-size: 0.8em;
+  line-height: 1.42857;
+}
+
+.altitude-parking__field-bottom-spacer:before {
+  content: "\00a0\00a0";
+}
+
+.altitude-parking__field-label {
+  padding: 0 0 0.5em 0;
+  font-weight: bold;
+}
+
+.altitude-parking__field-content .altitude-parking__field-input ,
+.altitude-parking__field-content .flatpickr-input,
+.altitude-parking__cta {
+  display: block;
+  display: flex;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1.1em;
+  line-height: 1.42857;
+  cursor: pointer;
+  border:0;
+  border-radius: 2px;
+  outline:0;
+}
+
+
+.altitude-parking__field-content .altitude-parking__field-input,
+.altitude-parking__field-content .flatpickr-input {
+  color: #333333;
+  background-color: #fff;
+}
+
+
+.altitude-parking__cta {
+  width: 100%;
+  padding: 0.5em;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background-color: #209ddc;
+
+  justify-content: center;
+}
+
+.altitude-parking__field-content,
+.altitude-parking__cta {
+  box-shadow: #0c418d 0 1px 5px;
+  transition: background-color 150ms ease-out, box-shadow 100ms ease-in;
+}
+.altitude-parking__field-content:hover,
+.altitude-parking__cta:focus {
+  box-shadow: #aaaaaa 0 0 5px;
+}
+
+.altitude-parking__cta:hover,
+.altitude-parking__cta:focus {
+  background-color: #18a7f0;
+  box-shadow: #18a7f0 0 0 5px;
+}
+
+
+.altitude-parking__field select.altitude-parking__field-input {
+  padding-right: 2.8em;
+}
+
+.altitude-parking__field select {
+  -webkit-appearance: button;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #b6c1c9 50%),
+    linear-gradient(135deg, #b6c1c9 50%, transparent 50%),
+    linear-gradient(to right, #b6c1c9, #b6c1c9);
+  background-repeat: no-repeat;
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.3em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+
+     -moz-appearance: button;
+}
+
+.altitude-parking__field select:focus {
+  background-image:
+    linear-gradient(45deg, #b6c1c9 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, #b6c1c9 50%),
+    linear-gradient(to right, #b6c1c9, #b6c1c9);
+  background-repeat: no-repeat;
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.3em) 0.5em;
+  background-size:
+  5px 5px,
+  5px 5px,
+  1px 1.5em;
+}
+
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+.altitude-parking__field select::-ms-expand {
+    display: none;
+}
+
+@media (min-width: 576px) {
+  .altitude-parking__form_content {
+    flex-direction: row;
+  }
+
+  .altitude-parking__button {
+    justify-content: flex-start;
+  }
+}
