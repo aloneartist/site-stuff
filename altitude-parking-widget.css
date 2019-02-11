@@ -22,9 +22,9 @@
 
 .altitude-parking__wrapper {
   display: flex;
-  width: 30%;
+  width: 25%;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 10px;
   color: #fff;
   background: #1c4d95;
 }
