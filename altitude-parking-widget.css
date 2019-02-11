@@ -21,7 +21,7 @@
 }*/
 
 .altitude-parking__wrapper {
-  display: block;
+  display: flex;
   width: 30%;
   box-sizing: border-box;
   padding: 20px;
