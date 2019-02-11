@@ -22,7 +22,7 @@
 
 .altitude-parking__wrapper {
   display: block;
-  width: 100%;
+  width: 30%;
   box-sizing: border-box;
   padding: 20px;
   color: #fff;
@@ -42,7 +42,7 @@
   color: #fff;
   background-color: #1c4d95;
   /* use to scela up/down controls */
-  font-size: 16px;
+  font-size: 12px;
 }
 .altitude-parking__form_content,
 .altitude-parking__field,
