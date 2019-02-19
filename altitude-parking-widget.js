@@ -15,12 +15,12 @@ if (Date.prototype.addHours == undefined) {
       timeFormat: 'H:i',
       dowFormat: "l",
       leadTime: 5,
-      defaultDuration: 5,
-      defaultArrHours: 10,
-      defaultArrMins: 30,
+      defaultDuration: 8,
+      defaultArrHours: 8,
+      defaultArrMins: 00,
       defaultDepHours: 17,
-      defaultDepMins: 30,
-      minuteIncrement: 15,
+      defaultDepMins: 00,
+      minuteIncrement: 20,
       time_24hr: false
   };
 
