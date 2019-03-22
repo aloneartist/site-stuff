@@ -24,7 +24,7 @@
   display: flex;
   width: 100%;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 0px;
   color: #fff;
   background: #1c4d95;
 }
@@ -38,7 +38,7 @@
   display: block;
   max-width: 1280px;
   margin: auto;
-  line-height: 1.42857;
+  line-height: .2;
   color: #fff;
   background-color: #1c4d95;
   /* use to scela up/down controls */
