@@ -50,6 +50,10 @@ if (Date.prototype.addHours == undefined) {
     if (minLeadTime >= defaultArrDate) {
         defaultArrDate = (new Date()).fp_incr(1);
         defaultArrDate.setHours(this.options.defaultArrHours, this.options.defaultArrMins)
+        while (minLeadTime >= defaultArrDate)
+        {
+          defaultArrDate = new Date(defaultArrDate.getTime() + this.options.minuteIncrement * 60000);
+        }
     }
 
     this.$arrivalDateTime.flatpickr({
