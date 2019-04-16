@@ -2,53 +2,38 @@
   display: none !important;
 }
 
-/* dev grid highilight */
-/*.altitude-parking__form_content,
-.altitude-parking__field,
-.altitude-parking__field-aside,
-.altitude-parking__field-content,
-.altitude-parking__field-content:after,
-.altitude-parking__button {
-  border: 1px solid red;
-}
-
-.altitude-parking__form_content {
-  border-color: orange;
-}
-.altitude-parking__field-content,
-.altitude-parking__field-aside {
-  border-color: cyan;
-}*/
-
 .altitude-parking__wrapper {
-  display: flex;
+  display: block;
   width: 100%;
   box-sizing: border-box;
-  padding: 0px;
+  padding: 20px;
   color: #fff;
   background: #1c4d95;
+  font-size: 16px;
 }
+
 .altitude-parking__wrapper *,
 .altitude-parking__wrapper *:before,
 .altitude-parking__wrapper *:after {
   box-sizing: inherit;
 }
 
+
 .altitude-parking__form {
   display: block;
   max-width: 1280px;
   margin: auto;
-  line-height: .2;
+  line-height: 1.42857;
   color: #fff;
   background-color: #1c4d95;
   /* use to scela up/down controls */
-  font-size: 12px;
 }
 .altitude-parking__form_content,
 .altitude-parking__field,
+.altitude-parking__field-header,
 .altitude-parking__button {
   display: flex;
-  padding: 0.2em;
+  padding: 0.5em;
 
   justify-content: center;
 }
@@ -59,9 +44,9 @@
   flex-wrap: wrap;
 }
 
+.altitude-parking__field-header,
 .altitude-parking__field {
   flex-direction: column;
-
   flex: 1 0 auto;
 }
 
@@ -125,7 +110,7 @@
   display: block;
   display: flex;
   width: 100%;
-  padding: 0.2em;
+  padding: 0.5em;
   font-size: 1.1em;
   line-height: 1.42857;
   cursor: pointer;
@@ -209,48 +194,149 @@
   1px 1.5em;
 }
 
-
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
 }
+
 .altitude-parking__field select::-ms-expand {
     display: none;
+}
+
+.altitude-parking__collpse {
+/*   display: none; */
+}
+
+.altitude-parking__field-header h2,
+.altitude-parking__field h2,
+.altitude-parking__field-header h3,
+.altitude-parking__field h3,
+.altitude-parking__field-header h4,
+.altitude-parking__field h4,
+.altitude-parking__field-header p,
+.altitude-parking__field p {
+  color: #fff;
+  margin: 0.1em;
+  padding: 0;
+}
+
+.altitude-parking__field-header {
+  width: 100%;
+}
+
+.altitude-parking__navbar-container .altitude-parking__wrapper {
+  font-size: 12px;
+}
+
+.altitude-parking__navbar-container:before,
+.altitude-parking__navbar-container:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.altitude-parking__navbar-container {
+  clear: both;
+}
+
+.altitude-parking__navbar-container .altitude-parking__wrapper {
+  padding: 10px;
+}
+
+.altitude-parking__navbar-container .altitude-parking__form {
+  max-width: 980px;
+}
+
+.altitude-parking__navbar-container .altitude-parking__field {
+  position: relative;
+}
+
+.altitude-parking__navbar-container .altitude-parking__field-aside {
+/*   display: none; */
+/*   position: absolute; */
+/*   top: -15px; */
+}
+
+.altitude-parking__navbar-container .altitude-parking__field-dow {
+/*   display:none; */
+}
+
+#header .altitude-parking__wrapper {
+  padding: 0;
+}
+
+#header .altitude-parking__navbar-container {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  right: 0;
+}
+
+.altitude-parking__collapse-btn {
+  display: inline-block;
+}
+
+.altitude-parking__collapse-btn:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  display: inline-block;
+  position: static;
+  line-height: 1;
+  margin: 0;
+  vertical-align: middle;
+  color: #ffd400;
+  content: '\e86f';
 }
 
 @media (min-width: 576px) {
   .altitude-parking__form_content {
     flex-direction: row;
   }
-
   .altitude-parking__button {
     justify-content: flex-start;
   }
 }
-/* Tables
-================================== */
-.Rtable {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 0 3em 0;
-  padding: 0;
-}
-.Rtable-cell {
-  box-sizing: border-box;
-  flex-grow: 1;
-  width: 100%;  // Default to full width
-  padding: 0.8em 1.2em;
-  overflow: hidden; // Or flex might break
-  list-style: none;
-  border: solid @bw white;
-  background: fade(slategrey,20%);
-  > h1, > h2, > h3, > h4, > h5, > h6 { margin: 0; }
+
+@media (min-width: 769px) {
+  #header .altitude-parking__navbar-container {
+    top: 93px;
+  }
 }
 
-/* Table column sizing
-================================== */
-.Rtable--2cols > .Rtable-cell  { width: 50%; }
-.Rtable--3cols > .Rtable-cell  { width: 33.33%; }
-.Rtable--4cols > .Rtable-cell  { width: 25%; }
-.Rtable--5cols > .Rtable-cell  { width: 20%; }
-.Rtable--6cols > .Rtable-cell  { width: 16.6%; }
+@media (max-width: 980px) {
+  #header .altitude-parking__navbar-container {
+    transition: top .2s;
+  }
+
+  #header .altitude-parking__navbar-out {
+    top: -600px;
+  }
+
+  .altitude-parking__collapsed .altitude-parking__field,
+  .altitude-parking__collapsed .altitude-parking__button {
+    display: none;
+  }
+}
+
+@media (min-width: 981px) {
+  .altitude-parking__field-header {
+    width: auto;
+  }
+  #header .altitude-parking__navbar-container {
+    top: 124px;
+  }
+  .altitude-parking__collapse-btn {
+    display: none;
+  }
+}
